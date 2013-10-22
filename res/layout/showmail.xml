@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/andback" >
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="375dp"
+        >
+    <TextView 
+        android:id="@+id/txtviewmail"
+        android:layout_width="fill_parent"
+        android:layout_height="375dp"
+        android:hint="Email Body here"/>
+    </ScrollView>
+    
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <Button
+        android:id="@+id/btnaccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendingAccept"
+        android:text="Accpet" />
+
+    <Button
+        android:id="@+id/btnreject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendReject"
+        android:text="Reject" />
+
+    <Button
+        android:id="@+id/btnforward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="forward"
+        android:text="Forward" />
+
+    <Button
+        android:id="@+id/btnmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="more"
+        android:text="More" />
+    <Button 
+        android:id="@+id/btnsmback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to List"
+        android:onClick="erback"/>
+    </LinearLayout>
+    
+</LinearLayout>

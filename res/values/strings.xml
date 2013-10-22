@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello Stark, Welcome !!</string>
+    <string name="app_name">EmailReader</string>
+    <string name="home_instructions">Please select your email client and enter your
+         correct email id and password and click on set button to proceed. 
+         If id is provided, enbizsmtp is taken as the default id.</string>
+    <string name="showmail_instructions">Please set the email to be sent the Accept
+        or Reject Mail by pressing the menu button. 
+        By default, the mails will be sent to enbizsmtp@gmail.com</string>
+
+</resources>
