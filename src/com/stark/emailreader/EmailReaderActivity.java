@@ -48,7 +48,6 @@ public class EmailReaderActivity extends Activity {
 	private static ArrayAdapter<String> itemAdapter;
 	static String etInputs,etInputd,etInputf,etInputc,s;
 	String email, pass;
-	Boolean client;
 	final static String keyinvoice = "invoice";
 	final static String keyleave = "leave";
 	final static String keypo = "po";
@@ -62,7 +61,6 @@ public class EmailReaderActivity extends Activity {
 	        Intent i4=getIntent();
 	        email= i4.getStringExtra("email");
 	        pass= i4.getStringExtra("pass");
-	        client= i4.getBooleanExtra("client", true);
 	        
 	        if(email==null){
 		        email="enbizsmtp@gmail.com";
@@ -77,15 +75,14 @@ public class EmailReaderActivity extends Activity {
 	        try {
 	                Session session = Session.getDefaultInstance(props, null);
 	                Store store = session.getStore("imaps");
-	                	if(client=true){
 		                	// IMAP host for gmail.
 			                // Replace <username> with the valid username of your Email ID.
 			                // Replace <password> with a valid password of your Email ID.
 		    	        	store.connect("imap.gmail.com", email, pass);
-		    	        }else if(client=false){
+
 		    	        	// IMAP host for yahoo.
-			                store.connect("imap.mail.yahoo.com", email, pass);
-		    	        }
+			                //store.connect("imap.mail.yahoo.com", email, pass);
+		    	        
 
 	                Toast.makeText(getApplicationContext(),store.toString(),Toast.LENGTH_LONG).show();
 

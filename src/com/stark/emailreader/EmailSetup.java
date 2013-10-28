@@ -16,12 +16,9 @@ import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
 
 public class EmailSetup extends Activity{
-	//private RadioGroup radioMailGroup;
-	  private RadioButton radioG, radioY;
 	  private Button btnSet, btnexit;
 	  EditText edid,edpwd;
 	  String id,pwd;
-	  Boolean client;
 	  TabHost tabHost;
 	  Resources ressources;
 	@Override
@@ -31,9 +28,6 @@ public class EmailSetup extends Activity{
 	        addListenerOnButton();
 	        edid=(EditText)findViewById(R.id.editId);
 	        edpwd=(EditText)findViewById(R.id.editPwd);
-	        
-	        radioG=(RadioButton)findViewById(R.id.radioG);
-	        radioY=(RadioButton)findViewById(R.id.radioY);
 	        
 	}
 	
@@ -51,21 +45,10 @@ public class EmailSetup extends Activity{
 		        //pwd=edpwd.getText().toString();
 				// find the radiobutton by returned id
 			        //radioMailButton = (RadioButton) findViewById(selectedId);
-			        if(radioG.isChecked())
-			        {
-			        	client=true;
-			        	//Toast.makeText(EmailSetup.this,radioG.getText(), Toast.LENGTH_SHORT).show();
-			        }
-			        else if(radioY.isChecked())
-			        {
-			        	client=false;
-			        	//Toast.makeText(EmailSetup.this,radioY.getText(), Toast.LENGTH_SHORT).show();
-			        }
-			        
+
 			        Intent mail= new Intent().setClass(getApplicationContext(), EmailReaderActivity.class);
 		    		mail.putExtra("email", edid.getText().toString());
 		    		mail.putExtra("pass", edpwd.getText().toString());
-		    		mail.putExtra("client", client);
 
 		    		startActivity(mail);
 		    		
