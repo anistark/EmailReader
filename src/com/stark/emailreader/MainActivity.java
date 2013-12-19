@@ -16,14 +16,14 @@ public class MainActivity extends TabActivity {
 		Resources ressources = getResources(); 
 		TabHost tabHost = getTabHost(); 
 		
-		// Android tab
+		// Mail Setup tab
 		Intent intentEmailSetup = new Intent().setClass(this,EmailSetup.class);
 		TabSpec tabSpecAndroid = tabHost
 			.newTabSpec("EmailSetup")
 			.setIndicator("", ressources.getDrawable(R.drawable.icon_android_config))
 			.setContent(intentEmailSetup);
 
-		// Apple tab
+		// Mail Reader tab
 		Intent intentEmailReader = new Intent().setClass(this, EmailReaderActivity.class);
 		TabSpec tabSpecApple = tabHost
 			.newTabSpec("EmailReader")

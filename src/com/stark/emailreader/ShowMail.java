@@ -19,19 +19,22 @@ import android.widget.Toast;
 public class ShowMail extends Activity{
 	final Context context = this;
 	String mailto, content, subject, mailfromid, mailfrompass;
-	TextView tvmail;
+	TextView tvmailbody, tvmailfrom, tvmailsub;
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showmail);
-        tvmail= (TextView)findViewById(R.id.txtviewmail);
+        tvmailbody= (TextView)findViewById(R.id.txtviewmail);
+        tvmailfrom= (TextView)findViewById(R.id.txtsmfrom);
+        tvmailsub= (TextView)findViewById(R.id.txtsmsub);
         Intent i2=getIntent();
         content= i2.getStringExtra("mailcontent");
         subject= i2.getStringExtra("mailsub");
         mailfromid= i2.getStringExtra("mailfromid");
         mailfrompass=i2.getStringExtra("mailfrompass");
-        tvmail.setText(content);
-
+        tvmailbody.setText(content);
+        tvmailfrom.setText(mailfromid);
+        tvmailsub.setText(subject);
 	}
 	public void erback(View vb){
 		finish();
@@ -65,7 +68,7 @@ public class ShowMail extends Activity{
     	try{
     		Intent mailforward= new Intent(getApplicationContext(), ForwardMail.class);
     		mailforward.putExtra("mailSub", subject);
-    		mailforward.putExtra("mailBody", tvmail.getText().toString());
+    		mailforward.putExtra("mailBody", tvmailbody.getText().toString());
 			startActivity(mailforward);
     	}catch(Exception e){
     		Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();

@@ -4,16 +4,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/andback" >
-    <ScrollView 
-    android:layout_width="match_parent"
-    android:layout_height="375dp"
-        >
+    
+    <TextView 
+        android:id="@+id/txtsmfrom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mail From here"/>
+    <TextView 
+        android:id="@+id/txtsmsub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mail Subject here"/>
     <TextView 
         android:id="@+id/txtviewmail"
         android:layout_width="fill_parent"
-        android:layout_height="375dp"
+        android:layout_height="wrap_content"
         android:hint="Email Body here"/>
-    </ScrollView>
     
     <LinearLayout
     android:layout_width="match_parent"
