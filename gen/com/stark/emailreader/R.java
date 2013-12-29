@@ -14,11 +14,16 @@ public final class R {
         public static final int andback=0x7f020000;
         public static final int andplt=0x7f020001;
         public static final int androidplatform=0x7f020002;
-        public static final int config=0x7f020003;
-        public static final int emailicon=0x7f020004;
-        public static final int home=0x7f020005;
-        public static final int icon_android_config=0x7f020006;
-        public static final int icon_apple_config=0x7f020007;
+        public static final int approve=0x7f020003;
+        public static final int back=0x7f020004;
+        public static final int cancel=0x7f020005;
+        public static final int config=0x7f020006;
+        public static final int emailicon=0x7f020007;
+        public static final int forward=0x7f020008;
+        public static final int home=0x7f020009;
+        public static final int icon_android_config=0x7f02000a;
+        public static final int icon_apple_config=0x7f02000b;
+        public static final int info=0x7f02000c;
     }
     public static final class id {
         public static final int action_Leave=0x7f06001b;

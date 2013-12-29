@@ -30,33 +30,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendingAccept"
-        android:text="Accpet" />
+        android:background="@drawable/approve" />
 
     <Button
         android:id="@+id/btnreject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendReject"
-        android:text="Reject" />
+        android:background="@drawable/cancel" />
 
     <Button
         android:id="@+id/btnforward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="forward"
-        android:text="Forward" />
+        android:background="@drawable/forward" />
 
     <Button
         android:id="@+id/btnmore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="more"
-        android:text="More" />
+        android:background="@drawable/info" />
     <Button 
         android:id="@+id/btnsmback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to List"
+        android:background="@drawable/back"
         android:onClick="erback"/>
     </LinearLayout>
     
